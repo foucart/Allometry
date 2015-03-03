@@ -1,0 +1,287 @@
+
+\documentclass[11pt,leqno]{article}
+\usepackage{amsthm,amsfonts,amsmath,enumerate,amssymb,stmaryrd,newcent} % Typical maths resource packages
+\usepackage{graphics}                 % Packages to allow inclusion of graphics
+\usepackage{color}                    % For creating coloured text and background
+\usepackage{hyperref}                 % For creating hyperlinks in cross references
+
+
+ \linespread{1.2}
+ \setlength{\parskip}{0.2in}
+ \setlength{\parindent}{0in}
+ \setlength{\oddsidemargin}{0in}
+ \setlength{\evensidemargin}{0in}
+ \setlength{\textwidth}{6.5in}
+ \setlength{\topmargin}{0in}
+ \setlength{\textheight}{8in}
+
+
+
+ \theoremstyle{plain}
+ \theoremstyle{definition}
+ \newtheorem{lem}{Lemma}
+ \newtheorem{defn}[lem]{Definition}
+ \newtheorem{thm}[lem]{Theorem}
+ \newtheorem{prop}[lem]{Proposition}
+ \newtheorem{cor}[lem]{Corollary}
+ \newtheorem{notn}[lem]{Notations}
+ \newtheorem{pb}[lem]{Problem}
+ \newtheorem{form}[lem]{Formulae}
+ \newtheorem*{conj}{Conjecture}
+ \newtheorem*{rk}{Remark}
+ \newtheorem*{com}{Comment}
+ \newtheorem*{ex}{Example}
+ \theoremstyle{remark}
+
+ \newcommand{\blem}{\begin{lem} \bf}
+ \newcommand{\elem}{\end{lem}}
+ \newcommand{\bdefn}{\begin{defn} \bf}
+ \newcommand{\edefn}{\end{defn}}
+ \newcommand{\bthm}{\begin{thm} }
+ \newcommand{\ethm}{\end{thm}}
+ \newcommand{\bprop}{\begin{prop} \bf}
+ \newcommand{\eprop}{\end{prop}}
+ \newcommand{\bcor}{\begin{cor} \bf}
+ \newcommand{\ecor}{\end{cor}}
+ \newcommand{\bnotn}{\begin{notn}}
+ \newcommand{\enotn}{\end{notn}}
+ \newcommand{\bpb}{\begin{pb}}
+ \newcommand{\epb}{\end{pb}}
+ \newcommand{\bform}{\begin{form}}
+ \newcommand{\eform}{\end{form}}
+ \newcommand{\brk}{\begin{rk}}
+ \newcommand{\erk}{\end{rk}}
+ \newcommand{\bcom}{\begin{com}}
+ \newcommand{\ecom}{\end{com}}
+ \newcommand{\bex}{\begin{ex}}
+ \newcommand{\eex}{\end{ex}}
+ \newcommand{\bpf}{\begin{proof}}
+ \newcommand{\epf}{\end{proof}}
+
+ \def \be {\begin{equation}}
+ \def \ee {\end{equation}}
+ \def \ba {\begin{eqnarray}}
+ \def \ea {\end{eqnarray}}
+ \def \ba* {\begin{eqnarray*}}
+ \def \ea* {\end{eqnarray*}}
+
+ \newcommand{\bmx}{\begin{matrix}}
+ \newcommand{\emx}{\end{matrix}}
+ \newcommand{\bbmx}{\begin{bmatrix}}
+ \newcommand{\ebmx}{\end{bmatrix}}
+ \newcommand{\bpmx}{\begin{pmatrix}}
+ \newcommand{\epmx}{\end{pmatrix}}
+ \newcommand{\bvmx}{\begin{vmatrix}}
+ \newcommand{\evmx}{\end{vmatrix}}
+
+ \newcommand{\A}{\mathbb{A}}
+ \newcommand{\B}{\mathbb{B}}
+ \newcommand{\C}{\mathbb{C}}
+ \newcommand{\D}{\mathbb{D}}
+ \newcommand{\E}{\mathbb{E}}
+ \newcommand{\F}{\mathbb{F}}
+ \newcommand{\G}{\mathbb{G}}
+ %\newcommand{\H}{\mathbb{H}}
+ \newcommand{\I}{\mathbb{I}}
+ \newcommand{\J}{\mathbb{J}}
+ \newcommand{\K}{\mathbb{K}}
+ %\newcommand{\L}{\mathbb{L}}
+ \newcommand{\M}{\mathbb{M}}
+ \newcommand{\N}{\mathbb{N}}
+ %\newcommand{\O}{\mathbb{O}}
+ %\newcommand{\P}{\mathbb{P}}
+ \newcommand{\Q}{\mathbb{Q}}
+ \newcommand{\R}{\mathbb{R}}
+ %\newcommand{\S}{\mathbb{S}}
+ \newcommand{\T}{\mathbb{T}}
+ \newcommand{\U}{\mathbb{U}}
+ \newcommand{\V}{\mathbb{V}}
+ \newcommand{\W}{\mathbb{W}}
+ \newcommand{\X}{\mathbb{X}}
+ \newcommand{\Y}{\mathbb{Y}}
+ \newcommand{\Z}{\mathbb{Z}}
+
+ %\newcommand{\AA}{\mathcal{A}}
+ \newcommand{\BB}{\mathcal{B}}
+ \newcommand{\CC}{\mathcal{C}}
+ \newcommand{\DD}{\mathcal{D}}
+ \newcommand{\EE}{\mathcal{E}}
+ \newcommand{\FF}{\mathcal{F}}
+ \newcommand{\GG}{\mathcal{G}}
+ \newcommand{\HH}{\mathcal{H}}
+ \newcommand{\II}{\mathcal{I}}
+ \newcommand{\JJ}{\mathcal{J}}
+ \newcommand{\KK}{\mathcal{K}}
+ \newcommand{\LL}{\mathcal{L}}
+ \newcommand{\MM}{\mathcal{M}}
+ \newcommand{\NN}{\mathcal{N}}
+ \newcommand{\OO}{\mathcal{O}}
+ \newcommand{\PP}{\mathcal{P}}
+ \newcommand{\QQ}{\mathcal{Q}}
+ \newcommand{\RR}{\mathcal{R}}
+ \newcommand{\Sp}{\mathcal{S}}
+ \newcommand{\TT}{\mathcal{T}}
+ \newcommand{\UU}{\mathcal{U}}
+ \newcommand{\VV}{\mathcal{V}}
+ \newcommand{\WW}{\mathcal{W}}
+ \newcommand{\XX}{\mathcal{X}}
+ \newcommand{\YY}{\mathcal{Y}}
+ \newcommand{\ZZ}{\mathcal{Z}}
+
+ \newcommand{\us}{\underset}
+ \newcommand{\os}{\overset}
+ \newcommand{\ul}{\underline}
+ \newcommand{\ol}{\overline}
+ \newcommand{\wh}{\widehat}
+ \newcommand{\wt}{\widetilde}
+
+ \newcommand{\la}{\lambda}
+ \newcommand{\La}{\Lambda}
+ \newcommand{\eps}{\varepsilon}
+ \newcommand{\fa}{\forall \,}
+ \newcommand{\e}{\exists \,}
+ \newcommand{\inc}{\subseteq}
+ \newcommand{\empt}{\varnothing}
+ \newcommand{\setm}{\setminus}
+ \newcommand{\ty}{+\infty}
+ \newcommand{\tto}{\longrightarrow}
+ \newcommand{\onto}{\twoheadrightarrow}
+ \newcommand{\embeds}{\hookrightarrow}
+ \newcommand{\imp}{\Longrightarrow}
+ \newcommand{\im}{\Rightarrow}
+ \newcommand{\f}{\frac}
+ \newcommand{\p}{\partial}
+
+
+ \newcommand{\lbt}{\llbracket}
+ \newcommand{\rbt}{\rrbracket}
+ \newcommand{\cst}{\mathrm{cst}}
+ \newcommand{\Ex}{\mathrm{Ex}}
+ \newcommand{\cl}{\mathrm{cl}}
+ \newcommand{\interior}{\mathrm{int}}
+ \newcommand{\co}{\mathrm{co}}
+ \newcommand{\cco}{\overline{\mathrm{co}}}
+ \newcommand{\spa}{\mathrm{span}}
+ \newcommand{\ran}{\mathrm{ran}}
+ \newcommand{\Id}{\mathrm{Id}}
+ \newcommand{\id}{\mathrm{id}}
+ \newcommand{\sgn}{\mathrm{sgn}}
+ \newcommand{\sign}{\backsim}
+ \newcommand{\bul}{\mbox{\small $\bullet$}}
+ \newcommand{\intg}{\mathrm{int}}
+ \newcommand{\ECT}{\mathrm{ECT}}
+
+
+
+ \title{Exact Constants in Banach Space Geometry:\\ User's Guide for the Allometry Software}
+ \author{Simon Foucart}
+ \date{}
+
+ 
+ \begin{document}
+
+ \maketitle
+ 
+ We describe in this note the MATLAB code that was used to perform the computations of  \cite{paper8}.
+We work with a finite-dimensional normed space $\VV$, which is of the following types
+ \begin{itemize}
+ \item type 0: the $n$-dimensional Euclidean space $\EE_n$,
+ \item type 1: the $n$-dimensional sequence space $\ell_p^n$,
+ \item type 2: the $(n+1)$-dimensional space $\PP_n$ of algebraic polynomials of degree $\le n$,
+ \item type 3: the $(2n+1)$-dimensional space $\TT_n$ of trigonometric polynomials of degree $\le n$,
+ \item type 4: the $2$-dimensional space determined by the vertices of its unit ball,
+  \item type 5: the $2$-dimensional space determined by the vertices of its dual unit ball. 
+ \end{itemize}
+ The functions available so far are --- in lexicographic order ---  {\tt \small AbsCdN}, {\tt \small Allo}, {\tt \small Allo}, {\tt \small CanCdN}, {\tt \small CanDual}, {\tt \small CdN}, {\tt \small DualNormAlg}, {\tt \small DualNormPolygon}, {\tt \small DualNormPolygon2}, {\tt \small DualNormTrig}, {\tt \small Mx2Vc}, {\tt \small NormAlg}, {\tt \small NormPolygon}, {\tt \small NormPolygon2}, {\tt \small NormTrig}, {\tt \small Nzed}, {\tt \small Reg2nGone}, {\tt \small Signs}, {\tt \small Signs1}, {\tt \small SymAllo}, {\tt \small Vc2Mx}.
+ Note that one can access at any time  a description of a function by typing {\tt help} followed by the name of the function at the MATLAB prompt. For instance, typing\\
+{\tt \small >> help CanCdN}\\
+returns\\
+{\tt \small >>   CANCDN Calculate the canonical condition number\\
+  \phantom{>>} CANCDN(V) returns the condition number of the frame formed by the columns of V relatively to its canonical dual frame} 
+ 
+ \section{The three main functions}
+ 
+ The functions {\tt \small CdN}, {\tt \small AbsCdN}, and {\tt \small Allo} are respectively designed to compute 
+ \begin{itemize}
+ \item the condition number of a system $\ul{v}=(v_1,\ldots,v_N)$ spanning the space $\VV$, relatively to a dual system $\ul{\la}=(\la_1,\ldots,\la_N)$ of linear functional on $\VV$, i.e. the quantity
+$$
+\kappa_\infty(\ul{v}|\ul{\la}) := 
+\sup_{a \in \ell_\infty^N} \f{\big\| \sum\nolimits_{j=1}^N a_j v_j \big\|}{\|a\|_\infty} 
+\; \cdot \;
+\sup_{v \in \VV} \f{\big\|  (\la(v_j)) \big\|_\infty}{\|v\|},
+$$
+ \item the absolute condition number of a system $\ul{v}=(v_1,\ldots,v_N)$ spanning the space $\VV$, i.e. the quantity
+ $$
+ \kappa_\infty(\ul{v}) := \min \big\{
+ \kappa_\infty(\ul{v}|\ul{\la}) , \quad
+ \mbox{$\ul{\la}$ dual system to $\ul{v}$}
+ \big\},
+ $$
+ \item the $N$-th allometry constant of the space $\VV$, i.e. the quantity
+ $$
+ \kappa_\infty^N(\VV) := \min \{
+ \kappa_\infty(\ul{v}),  \quad
+\mbox{$\ul{v}=(v_1,\ldots,v_N)$ spans $\VV$}
+ \}.
+ $$
+ \end{itemize}  
+ 
+ \section{Input arguments}
+ 
+ If a system $\ul{v}=(v_1,\ldots,v_N)$ spanning the $n$-dimensional space $\VV$ needs to be entered, e.g. in {\tt \small AbsCdN}, it is done so 
+ via its matrix in a specific basis $\ul{w}=(w_1,\ldots,w_n)$ for $\VV$,
+ i.e. via the $n \times N$ matrix
+ $$
+V= \bbmx
+{\rm coef}_{w_1}(v_1) & \ldots & {\rm coef}_{w_1}(v_N)\\
+\vdots & \cdots & \vdots\\
+{\rm coef}_{w_n}(v_1) & \ldots & {\rm coef}_{w_n}(v_N)
+\ebmx.
+$$
+If in addition a dual system $\ul{\la}=(\la_1,\ldots,\la_N)$  needs to be entered, it is done so via the $n \times N$ matrix
+$$
+U = \bbmx
+\la_1(w_1) & \cdots & \la_N(w_1)\\
+\vdots & \cdots & \vdots\\
+\la_1(w_n) & \cdots & \la_N(w_n)
+\ebmx .
+$$
+Note that the number of elements in the system $\ul{v}$ and the dimension of the space $\VV$ are implicitly  entered.
+If we want to calculate the $N$-th allometry constant of a $n$ -dimensional space $\VV$, however, we need to input the integers $N$ and $n$.
+For example, we would type\\
+{\tt \small >> Allo(3,4,0)}\\
+{\tt \small >> Allo(3,4,1,1)}\\
+to compute the $4$-th allometry constant of the $3$-dimensional space $\EE_3$ --- space of type 0 --- and then the $4$-th allometry constant of the $3$-dimensional space $\ell_1^3$ --- space of type 1, specifying $p=1$ as the fourth argument.
+When working with polygonal spaces --- spaces of type 4 and type 5 --- we provide the vertices of the (dual) unit ball as fourth argument. For instance,\\
+{\tt \small >>Hex=[1 1/2 -1/2 -1 -1/2 1/2; 0 sqrt(3)/2 sqrt(3)/2 0 -sqrt(3)/2 -sqrt(3)/2];}\\
+{\tt \small >>[Allo(2,2,4,Hex),Allo(2,3,4,Hex)]}\\
+returns {\tt \small 1.5000} and {\tt \small 1.3333}, which are the $2$-cd and $3$-rd allometry constants of the `hexagonal' space and
+believed to be maximal among all $2$-dimensional spaces. 
+
+ 
+ \section{Output arguments}
+ 
+ If only one output argument is requested, then the result is the numerical value of the quantity invoked by the function.
+ If more than one output argument is requested, then optimal systems are also returned.
+ For example, typing \\
+ {\tt \small >> [k,OS,OD]=Allo(2,3,0)}\\
+ returns the value of the $3$-rd allometry constant of the Euclidean plane $\EE_2$,
+ together with a best conditioned $3$-frame {\tt \small OS} and an optimal dual frame {\tt \small OD}.
+ 
+
+%To avoid confusion, we will run the indices $h$ in $1:2^{N-1}$, $i,k$ in $1:n$,  and $j,l$ in $1:N$.  
+
+  
+ 
+ \begin{thebibliography}{99}
+ 
+
+  \bibitem{paper8} Foucart, S.,
+  Allometry constants of finite-dimensional spaces: 
+theory and computations,
+ Preprint. 
+
+  \end{thebibliography}   
+
+ 
+ \end{document}
